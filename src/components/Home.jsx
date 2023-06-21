@@ -143,8 +143,7 @@ const Home = () => {
             alignItems={isMobile ? "center" : "flex-start"}
             flexWrap={isMobile ? "wrap" : "nowrap"}
             direction={["column", "row"]}>
-              <HStack >
-              <Card maxW='sm'>
+<Card maxW='sm'>
   <CardBody>
     <Image
       src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
@@ -176,55 +175,146 @@ const Home = () => {
   </CardFooter>
 </Card>
 
-<Card maxW='lg' bgColor={"whiteAlpha.200"}>
+<Card  bgColor={"whiteAlpha.200"} width={"1000px"} >
   <CardBody>
-    <Image
-      src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
-      alt='Green double couch with wooden legs'
-      borderRadius='lg'
-    />
-    <Stack mt='6' spacing='3'>
-      <Heading size='md'>Living room Sofa</Heading>
-      <Text>
-        This sofa is perfect for modern tropical spaces, baroque inspired
-        spaces, earthy toned spaces and for people who love a chic design with a
-        sprinkle of vintage design.
+    <Center>
+    <Heading size='md'>Hackathons For You </Heading>
+    </Center>
+    <VStack mt='6' spacing='3'>
+    <Card
+  direction={{ base: 'column', sm: 'row' }}
+  bgColor={"whiteAlpha.200"}
+  overflow='hidden'
+  variant='outline'
+  width={"600px"}
+>
+  <Image
+    objectFit='cover'
+    maxW={{ base: '100%', sm: '200px' }}
+    src={img2}
+    alt='Caffe Latte'
+  />
+
+  <Stack>
+    <CardBody>
+      <Heading size='md'> 1 Hackathon</Heading>
+
+      <Text py='2'>
+        1st hackathon of HAT.
       </Text>
-      <Text color='blue.600' fontSize='2xl'>
-        $450
-      </Text>
-    </Stack>
-  </CardBody>
-  <Divider />
-  <CardFooter>
-    <ButtonGroup spacing='2'>
-      <Button variant='solid' colorScheme='blue'>
-        Buy now
+    </CardBody>
+
+    <CardFooter>
+      <Button variant={"solid"} bgColor={'#c961de'}>
+        Join
+      </Button >
+      <Button variant='solid' bgGradient={"linear-gradient(315deg, #facc6b 0%, #fabc3c 74%)"} mx={"10"}>
+      1000$
       </Button>
-      <Button variant='ghost' colorScheme='blue'>
-        Add to cart
+      <Button variant='solid'  bgColor={"#1c1c65"}>
+      550 hackers
       </Button>
-    </ButtonGroup>
-  </CardFooter>
+    </CardFooter>
+  </Stack>
 </Card>
 
-<Card maxW='sm' bgColor={"whiteAlpha.100"}  >
+<Card
+  direction={{ base: 'column', sm: 'row' }}
+  bgColor={"whiteAlpha.200"}
+  overflow='hidden'
+  variant='outline'
+  width={"600px"}
+>
+  <Image
+    objectFit='cover'
+    maxW={{ base: '100%', sm: '200px' }}
+    src={img2}
+    alt='Caffe Latte'
+  />
+
+  <Stack>
+    <CardBody>
+      <Heading size='md'> 1 Hackathon</Heading>
+
+      <Text py='2'>
+        1st hackathon of HAT.
+      </Text>
+    </CardBody>
+
+    <CardFooter>
+      <Button variant={"solid"} bgColor={'#c961de'}>
+        Join
+      </Button >
+      <Button variant='solid' bgGradient={"linear-gradient(315deg, #facc6b 0%, #fabc3c 74%)"} mx={"10"}>
+      1000$
+      </Button>
+      <Button variant='solid'  bgColor={"#1c1c65"}>
+      550 hackers
+      </Button>
+    </CardFooter>
+  </Stack>
+</Card>
+
+
+<Card
+  direction={{ base: 'column', sm: 'row' }}
+  bgColor={"whiteAlpha.200"}
+  overflow='hidden'
+  variant='outline'
+  width={"600px"}
+>
+  <Image
+    objectFit='cover'
+    maxW={{ base: '100%', sm: '200px' }}
+    src={img2}
+    alt='Caffe Latte'
+  />
+
+  <Stack>
+    <CardBody>
+      <Heading size='md'> 1 Hackathon</Heading>
+
+      <Text py='2'>
+        1st hackathon of HAT.
+      </Text>
+    </CardBody>
+
+    <CardFooter>
+      <Button variant={"solid"} bgColor={'#c961de'}>
+        Join
+      </Button >
+      <Button variant='solid' bgGradient={"linear-gradient(315deg, #facc6b 0%, #fabc3c 74%)"} mx={"10"}>
+      1000$
+      </Button>
+      <Button variant='solid'  bgColor={"#1c1c65"}>
+      550 hackers
+      </Button>
+    </CardFooter>
+  </Stack>
+</Card>
+
+
+    </VStack>
+  </CardBody>
+</Card>
+
+<Card  bgColor={"whiteAlpha.100"} width={"300px"}>
   <CardBody >
     <Center>
             
-        <Avatar objectFit="contain" w="180px" h="180px"  borderWidth={"10px"} borderColor={"red"}
+        <Avatar objectFit="contain" w="150px" h="150px"  borderWidth={"5px"} borderColor={"red"}
         src={img2}
       alt='Green double couch with wooden legs'     
     />
       
     </Center>
     <Center>
-    <Heading size='lg' mt={"4"} >Akhil Binoy
+    <Heading size='md' mt={"4"}>Akhil Binoy
 </Heading>
     
     </Center>
     <Center>
-    <Text fontSize={"20px"}>25 points</Text>
+    <Text size={"md"}>25 points</Text>
     </Center>
     
     <VStack mt='6' spacing='3'>
@@ -236,7 +326,7 @@ mt={"3"}
   overflow='hidden'
   variant='outline'
   size={"md"}
-  maxH={"150px"}
+  maxH={"100px"}
   _hover={{ bgGradient:'linear(to-l, #7928CA, #FF0080)' }}
         sx={{
           "&:hover > *": {
@@ -254,9 +344,9 @@ mt={"3"}
   />
 
   <Stack>
-    <CardBody objectFit={"contain"}>
+    <CardBody objectFit={"contain"} >
       <Heading size='md'>Akhil Binoy</Heading>
-      <Text size={'sm'}>100 points</Text>
+      <Text fontSize={"10px"}>100 points</Text>
     </CardBody>
   </Stack>
   </Card>
@@ -266,7 +356,7 @@ mt={"3"}
   overflow='hidden'
   variant='outline'
   size={"md"}
-  maxH={"150px"}
+  maxH={"100px"}
   _hover={{bgGradient:'linear(to-l, #7928CA, #FF0080)' }}
         sx={{
           "&:hover > *": {
@@ -285,8 +375,8 @@ mt={"3"}
 
   <Stack>
     <CardBody objectFit={"contain"}>
-      <Heading size='md'>Akhil Binoy</Heading>
-      <Text size={'sm'}>100 points</Text>
+      <Heading size={"md"}>Akhil Binoy</Heading>
+      <Text fontSize={"10px"}>100 points</Text>
     </CardBody>
   </Stack>
   </Card>
@@ -296,7 +386,7 @@ mt={"3"}
   overflow='hidden'
   variant='outline'
   size={"md"}
-  maxH={"150px"}
+  maxH={"100px"}
   _hover={{bgGradient:'linear(to-l, #7928CA, #FF0080)' } }
         sx={{ 
           "&:hover > *": {
@@ -316,7 +406,7 @@ mt={"3"}
   <Stack>
     <CardBody objectFit={"contain"}>
       <Heading size='md'>Akhil Binoy</Heading>
-      <Text size={'sm'}>100 points</Text>
+      <Text fontSize={"10px"}>100 points</Text>
     </CardBody>
   </Stack>
   </Card>
@@ -325,7 +415,7 @@ mt={"3"}
   
 </Card>
 
-              </HStack>
+      
             </Stack>
           </Container>
         </Box>
