@@ -11,20 +11,9 @@ import { useState, useEffect } from 'react';
 import img2 from "../assets/2.png";
 import { Image, Box } from '@chakra-ui/react';
 
-function Navbar() {
+function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const [displayText, setDisplayText] = useState('TODDYTON');
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Update the displayText state with the new text
-      setDisplayText(displayText === 'TODDYTON' ? 'കള്ള്TON' : 'TODDYTON');
-    }, 2000); // Change text every 2 seconds
-
-    return () => {
-      // Clear the interval when the component is unmounted
-      clearInterval(interval);
-    };})
+  
   return (
     <>
     <Avatar pos={"fixed"}
@@ -95,4 +84,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Header

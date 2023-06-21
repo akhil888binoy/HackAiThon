@@ -17,6 +17,7 @@ import { HStack } from '@chakra-ui/react';
 import { useEffect , useState} from 'react';
 import { ScaleFade } from '@chakra-ui/react';
 import { ChakraProvider } from '@chakra-ui/react';
+import { Fade } from '@chakra-ui/react';
 import {
   Accordion,
   AccordionItem,
@@ -36,7 +37,6 @@ const headingOptions={
     left : "40%",
     top : "30%",
     transform : "translate(-50%, -50%)",
-    textTransform : "uppercase",
     p:"4",
     size:"4x1",
 }
@@ -51,10 +51,15 @@ const theme = {
 
 
 const Home = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
 
+  useEffect(() => {
+    setIsOpen(true);
+  }, []);
   
 
     const [isMobile] = useMediaQuery("(max-width: 768px)");
+    const [showText, setShowText] = React.useState(true);
 
   
 
@@ -66,11 +71,14 @@ const Home = () => {
          <Box w="full" h={'full'}>
                  <Image src={img1} h="100vh" w={'full'} objectFit={'cover'}/>
                  <ChakraProvider theme={theme}>
-                 <Heading  textColor={"white"}  fontSize={"50px"} {...headingOptions} fontFamily={"heading"}> Welcome to <Text color={"#c961de"} fontSize={"100px"} > Hack AI Thon</Text>  </Heading> 
+                 <Heading  textColor={"white"}  fontSize={"40px"} {...headingOptions} fontFamily={"heading"}> Welcome to 
+                      <Text color={"#c961de"} fontSize={"100px"} > Hack AI Thon</Text> 
+                      Code, Collaborate, Conquer 
+                </Heading> 
 
-    </ChakraProvider>
+                </ChakraProvider>
                 
-    </Box>
+        </Box>
     <Container>
         <Stack>
 
