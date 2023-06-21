@@ -3,13 +3,13 @@ import { Radio , Icon, Avatar } from '@chakra-ui/react'
 import { Drawer, Flex} from '@chakra-ui/react'
 import { DrawerOverlay  , DrawerContent, DrawerHeader, DrawerBody , Button , Stack, RadioGroup , useDisclosure} from '@chakra-ui/react'
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
-import { BsList } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import { VStack , HStack } from '@chakra-ui/react'; 
 import { Heading } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import img2 from "../assets/2.png";
 import { Image, Box } from '@chakra-ui/react';
+
 
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure()
