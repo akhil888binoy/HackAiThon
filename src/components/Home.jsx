@@ -43,7 +43,7 @@ const headingOptions={
 const buttonOptions={
   position : "absolute",
     left : "40%",
-    top : "30%",
+    top : "27%",
     transform : "translate(-50%, -50%)",
     p:"4",
     size:"4x1",
@@ -94,7 +94,7 @@ const Home = () => {
                 </Heading> 
       
                     
-                      <HStack {...buttonOptions} gap={isMobile ? "10%" : "20%"} verticalAlign={" center"}  h='full'
+                      <HStack {...buttonOptions} gap={isMobile ? "10%" : "10%"} verticalAlign={" center"}  h='full'
             alignItems={isMobile ? "flex-start" : "flex-start"}
            
             >
@@ -143,42 +143,117 @@ const Home = () => {
             alignItems={isMobile ? "center" : "flex-start"}
             flexWrap={isMobile ? "wrap" : "nowrap"}
             direction={["column", "row"]}>
-<Card maxW='sm'>
+<Card width={"550px"} bgColor={"whiteAlpha.100"}>
   <CardBody>
-    <Image
-      src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
-      alt='Green double couch with wooden legs'
-      borderRadius='lg'
-    />
-    <Stack mt='6' spacing='3'>
-      <Heading size='md'>Living room Sofa</Heading>
-      <Text>
-        This sofa is perfect for modern tropical spaces, baroque inspired
-        spaces, earthy toned spaces and for people who love a chic design with a
-        sprinkle of vintage design.
+    <Center>
+    <Heading size='md' textColor={"white"}>Themes for Hackathon</Heading>
+    </Center>
+    <HStack mt={"8"} spacing={"4"}>
+    <Text color='white' fontWeight={"bold"} fontSize={"17px"}>
+        Hackathons
       </Text>
-      <Text color='blue.600' fontSize='2xl'>
-        $450
+      <Text color='white' fontWeight={"bold"}  fontSize={"17px"}>
+        Top Themes
       </Text>
-    </Stack>
+      <Text color='white' fontWeight={"bold"}  fontSize={"17px"}>
+        Total prices
+      </Text>
+    </HStack>
+    <VStack mt='6' spacing='3'>
+    
+    <Card
+    mt={"3"}
+  bgColor={"whiteAlpha.200"}
+  direction={{ base: 'column', sm: 'row' }}
+  overflow='hidden'
+  variant='outline'
+  h={"80px"}
+   w={"350px"}
+  _hover={{ bgGradient:'linear(to-l, #7928CA, #FF0080)' }}
+        sx={{
+          "&:hover > *": {
+            color: "white",
+          },
+        }}
+        >
+
+<HStack   mx="7" spacing={"7"} alignItems={"center"}>
+
+    <Text size='md' fontWeight={"bold"}>100</Text>
+    <Text size='md' fontWeight={"bold"}>Beginner friendly</Text>
+    <Text size='md' fontWeight={"bold"}>$40,000</Text>
+</HStack>
+      
+  
+  </Card>
+
+
+  <Card
+    mt={"3"}
+  bgColor={"whiteAlpha.200"}
+  direction={{ base: 'column', sm: 'row' }}
+  overflow='hidden'
+  variant='outline'
+  h={"80px"}
+   w={"350px"}
+  _hover={{ bgGradient:'linear(to-l, #7928CA, #FF0080)' }}
+        sx={{
+          "&:hover > *": {
+            color: "white",
+          },
+        }}
+        >
+
+<HStack   mx="7" spacing={"7"} alignItems={"center"}>
+
+    <Text size='md' fontWeight={"bold"}>100</Text>
+    <Text size='md' fontWeight={"bold"}>Beginner friendly</Text>
+    <Text size='md' fontWeight={"bold"}>$40,000</Text>
+</HStack>
+      
+  
+  </Card>
+
+
+
+
+  <Card
+    mt={"3"}
+  bgColor={"whiteAlpha.200"}
+  direction={{ base: 'column', sm: 'row' }}
+  overflow='hidden'
+  variant='outline'
+  h={"80px"}
+   w={"350px"}
+  _hover={{ bgGradient:'linear(to-l, #7928CA, #FF0080)' }}
+        sx={{
+          "&:hover > *": {
+            color: "white",
+          },
+        }}
+        >
+
+<HStack   mx="7" spacing={"7"} alignItems={"center"}>
+
+    <Text size='md' fontWeight={"bold"}>100</Text>
+    <Text size='md' fontWeight={"bold"}>Beginner friendly</Text>
+    <Text size='md' fontWeight={"bold"}>$40,000</Text>
+</HStack>
+      
+  
+  </Card>
+
+
+
+  
+    </VStack>
   </CardBody>
-  <Divider />
-  <CardFooter>
-    <ButtonGroup spacing='2'>
-      <Button variant='solid' colorScheme='blue'>
-        Buy now
-      </Button>
-      <Button variant='ghost' colorScheme='blue'>
-        Add to cart
-      </Button>
-    </ButtonGroup>
-  </CardFooter>
 </Card>
 
 <Card  bgColor={"whiteAlpha.200"} width={"1000px"} >
   <CardBody>
     <Center>
-    <Heading size='md'>Hackathons For You </Heading>
+    <Heading size='lg'>Hackathons For You </Heading>
     </Center>
     <VStack mt='6' spacing='3'>
     <Card
