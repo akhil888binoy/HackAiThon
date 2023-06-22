@@ -35,7 +35,7 @@ const Footer = () => {
         </VStack>
         <VStack w="full" borderLeft={['none', '1px solid white']} borderRight={['none', '1px solid white']}>
           <Heading size="md" textTransform="uppercase" textAlign="center">
-            Video Hub
+            Hack AI Thon
           </Heading>
           <Text >All Rights Reserved</Text>
         </VStack>
