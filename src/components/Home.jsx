@@ -2,6 +2,7 @@ import { Avatar, Box } from '@chakra-ui/react'
 import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import img1 from "../assets/1.png"
+import img3 from "../assets/3.png"
 import "@fontsource/poppins";
 import { Carousel } from 'react-responsive-carousel';
 import { Image } from '@chakra-ui/react';
@@ -53,6 +54,24 @@ const cardOptions={
   position : "absolute",
    left:"50%",
     top : "60%",
+    transform : "translate(-50%, -50%)",
+    p:"4",
+    size:"4x1",
+}
+
+const hackathonOptions={
+  position : "absolute",
+   left:"50%",
+    top : "40%",
+    transform : "translate(-50%, -50%)",
+    p:"4",
+    size:"4x1",
+}
+
+const hackathonfooterOptions={
+  position : "absolute",
+   left:"70%",
+    top : "75%",
     transform : "translate(-50%, -50%)",
     p:"4",
     size:"4x1",
@@ -245,7 +264,7 @@ const Home = () => {
 
 
 
-  
+
     </VStack>
   </CardBody>
 </Card>
@@ -308,7 +327,14 @@ const Home = () => {
   />
 
   <Stack>
-    <CardBody>
+  <Image
+    objectFit='cover'
+    
+    src={img3}
+    alt='Caffe Latte'
+  />
+    <CardBody {...hackathonOptions}>
+    
       <Heading size='md'> 1 Hackathon</Heading>
 
       <Text py='2'>
@@ -316,7 +342,7 @@ const Home = () => {
       </Text>
     </CardBody>
 
-    <CardFooter>
+    <CardFooter {...hackathonfooterOptions}>
       <Button variant={"solid"} bgColor={'#c961de'}>
         Join
       </Button >
