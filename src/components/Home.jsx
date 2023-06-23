@@ -36,7 +36,6 @@ import {
 const headingOptions={
     position : "absolute",
     left : "40%",
-    top : "17%",
     transform : "translate(-50%, -50%)",
     p:"4",
     size:"4x1",
@@ -44,7 +43,7 @@ const headingOptions={
 const buttonOptions={
   position : "absolute",
     left : "40%",
-    top : "27%",
+    
     transform : "translate(-50%, -50%)",
     p:"4",
     size:"4x1",
@@ -53,7 +52,7 @@ const buttonOptions={
 const cardOptions={
   position : "absolute",
    left:"50%",
-    top : "60%",
+    
     transform : "translate(-50%, -50%)",
     p:"4",
     size:"4x1",
@@ -61,8 +60,8 @@ const cardOptions={
 
 const hackathonOptions={
   position : "absolute",
-   left:"50%",
-    top : "40%",
+   left:"55%",
+    top : "38%",
     transform : "translate(-50%, -50%)",
     p:"4",
     size:"4x1",
@@ -71,7 +70,7 @@ const hackathonOptions={
 const hackathonfooterOptions={
   position : "absolute",
    left:"70%",
-    top : "75%",
+    top : "82%",
     transform : "translate(-50%, -50%)",
     p:"4",
     size:"4x1",
@@ -107,15 +106,14 @@ const Home = () => {
          <Box w="full" h={'full'}>
                  <Image src={img1} h="100vh" w={'full'} objectFit={'cover'}/>
                  <ChakraProvider theme={theme}>
-                 <Heading  textColor={"white"}  fontSize={isMobile ? "30px" : "40px"} {...headingOptions} fontFamily={"heading"}> Welcome to 
+                 <Heading  textColor={"white"}  fontSize={isMobile ? "30px" : "40px"} {...headingOptions} top={isMobile ? "12%" : "17%"} fontFamily={"heading"}> Welcome to 
                       <Text bgGradient='linear(to-l, #7928CA, #FF0080)' bgClip='text' fontSize={isMobile ? "70px" : "100px"} > Hack AI Thon</Text> 
                       Code, Collaborate, Conquer !
                 </Heading> 
       
                     
                       <HStack {...buttonOptions} gap={isMobile ? "10%" : "10%"} verticalAlign={" center"}  h='full'
-            alignItems={isMobile ? "flex-start" : "flex-start"}
-           
+            alignItems={isMobile ? "flex-start" : "flex-start"} top = {isMobile ? "21%" : "27%"}           
             >
                         <Button color='white' padding={isMobile ? "10" : "10"} borderRadius={"20"} width={isMobile ? "100px" : "200px"} size='lg' bgColor="#6617cb"
                             bgImage="linear-gradient(315deg, #6617cb 0%, #cb218e 74%)"  _hover={{ bg: "#c961de" }}
@@ -150,12 +148,10 @@ const Home = () => {
                 
         </Box>
         <Box w={"full"} h={"full"}>
-          <ChakraProvider>
-            
-          </ChakraProvider>
-          <Image src={img1} h="full" w={'full'} objectFit={'cover'}/>
+          <Image src={img1} h={isMobile ? "1500px" : "full"} w={'full'} objectFit={'strech'}/>
+          <ChakraProvider></ChakraProvider>
           <Container  minH={"100vh"}  
-        maxW={"container.xl"} {...cardOptions} 
+        maxW={"container.xl"} {...cardOptions}  top={isMobile ? "50%" : "55%"}
          >
             <Stack h='full'
             
@@ -167,7 +163,7 @@ const Home = () => {
     <Center>
     <Heading size='md' textColor={"white"}>Themes for Hackathon</Heading>
     </Center>
-    <HStack mt={"8"} spacing={"4"}>
+    <HStack mt={"8"} spacing={"4"} mx={isMobile ? "10" : ""}>
     <Text color='white' fontWeight={"bold"} fontSize={"17px"}>
         Hackathons
       </Text>
@@ -207,60 +203,7 @@ const Home = () => {
   </Card>
 
 
-  <Card
-    mt={"3"}
-  bgColor={"whiteAlpha.200"}
-  direction={{ base: 'column', sm: 'row' }}
-  overflow='hidden'
-  variant='outline'
-  h={"80px"}
-   w={"350px"}
-  _hover={{ bgGradient:'linear(to-l, #7928CA, #FF0080)' }}
-        sx={{
-          "&:hover > *": {
-            color: "white",
-          },
-        }}
-        >
-
-<HStack   mx="7" spacing={"7"} alignItems={"center"}>
-
-    <Text size='md' fontWeight={"bold"}>100</Text>
-    <Text size='md' fontWeight={"bold"}>Beginner friendly</Text>
-    <Text size='md' fontWeight={"bold"}>$40,000</Text>
-</HStack>
-      
   
-  </Card>
-
-
-
-
-  <Card
-    mt={"3"}
-  bgColor={"whiteAlpha.200"}
-  direction={{ base: 'column', sm: 'row' }}
-  overflow='hidden'
-  variant='outline'
-  h={"80px"}
-   w={"350px"}
-  _hover={{ bgGradient:'linear(to-l, #7928CA, #FF0080)' }}
-        sx={{
-          "&:hover > *": {
-            color: "white",
-          },
-        }}
-        >
-
-<HStack   mx="7" spacing={"7"} alignItems={"center"}>
-
-    <Text size='md' fontWeight={"bold"}>100</Text>
-    <Text size='md' fontWeight={"bold"}>Beginner friendly</Text>
-    <Text size='md' fontWeight={"bold"}>$40,000</Text>
-</HStack>
-      
-  
-  </Card>
 
 
 
@@ -275,135 +218,73 @@ const Home = () => {
     <Heading size='lg'>Hackathons For You </Heading>
     </Center>
     <VStack mt='6' spacing='3'>
-    <Card
-  direction={{ base: 'column', sm: 'row' }}
-  bgColor={"whiteAlpha.200"}
-  overflow='hidden'
-  variant='outline'
-  width={"600px"}
->
-  <Image
-    objectFit='cover'
-    maxW={{ base: '100%', sm: '200px' }}
-    src={img2}
-    alt='Caffe Latte'
-  />
-
-  <Stack>
-    <CardBody>
-      <Heading size='md'> 1 Hackathon</Heading>
-
-      <Text py='2'>
-        1st hackathon of HAT.
-      </Text>
-    </CardBody>
-
-    <CardFooter>
-      <Button variant={"solid"} bgColor={'#c961de'}>
-        Join
-      </Button >
-      <Button variant='solid' bgGradient={"linear-gradient(315deg, #facc6b 0%, #fabc3c 74%)"} mx={"10"}>
-      1000$
-      </Button>
-      <Button variant='solid'  bgColor={"#1c1c65"}>
-      550 hackers
-      </Button>
-    </CardFooter>
-  </Stack>
-</Card>
 
 <Card
   direction={{ base: 'column', sm: 'row' }}
-  bgColor={"whiteAlpha.200"}
   overflow='hidden'
   variant='outline'
-  width={"600px"}
+  maxW={"600px"}
 >
   <Image
     objectFit='cover'
-    maxW={{ base: '100%', sm: '200px' }}
+    maxW={isMobile ? "140px" : "200px"}
     src={img2}
     alt='Caffe Latte'
   />
 
-  <Stack>
-  <Image
-    objectFit='cover'
-    
+  <Stack >
+    <Image
+    objectFit="cover"
     src={img3}
     alt='Caffe Latte'
   />
-    <CardBody {...hackathonOptions}>
-    
-      <Heading size='md'> 1 Hackathon</Heading>
-
-      <Text py='2'>
-        1st hackathon of HAT.
+    <CardBody {...hackathonOptions}  >
+    <Stack direction={"row"} spacing={isMobile ? "2" : "5"}> 
+    <Heading size={isMobile ? "sm" : "md"}> 1 Hackathon</Heading>
+        <Text  px={isMobile ? "2" : "2"} fontSize={isMobile ? "10px" : "15px"} borderRadius={"10px"} bgColor={"teal"}>
+        Online
       </Text>
+      </Stack>
+     
+        
+      <Text  my={isMobile ? "2" : "4"} px={isMobile ? "1" : "2"} fontWeight={"bold"} fontSize={isMobile ? "10px" : "15px"} borderRadius={"10px"} bgColor={"purple"}>
+        23 June 2023 - 25 June 2023
+      </Text>
+      <Text  my={isMobile ? "1" : "4"}  mx={"2"} fontSize={isMobile ? "10px" : "15px"} >
+        IIT Kanpur
+      </Text>
+        
+
     </CardBody>
 
     <CardFooter {...hackathonfooterOptions}>
-      <Button variant={"solid"} bgColor={'#c961de'}>
+      <Button variant={"solid"} bgColor={'#c961de'} size={isMobile ? "sm" : "sm"} borderRadius={isMobile ? "20px" : "40px"}  ml={"5"}>
         Join
       </Button >
-      <Button variant='solid' bgGradient={"linear-gradient(315deg, #facc6b 0%, #fabc3c 74%)"} mx={"10"}>
-      1000$
+      <Button variant='solid' bgGradient={"linear-gradient(315deg, #facc6b 0%, #fabc3c 74%)"} mx={isMobile ? "4" : "9"} size={"sm"}>
+      $1000
       </Button>
-      <Button variant='solid'  bgColor={"#1c1c65"}>
+      <Button variant='solid'  bgColor={"#1c1c65"} size={"sm"}  mr="10">
       550 hackers
       </Button>
+      
     </CardFooter>
   </Stack>
 </Card>
 
 
-<Card
-  direction={{ base: 'column', sm: 'row' }}
-  bgColor={"whiteAlpha.200"}
-  overflow='hidden'
-  variant='outline'
-  width={"600px"}
->
-  <Image
-    objectFit='cover'
-    maxW={{ base: '100%', sm: '200px' }}
-    src={img2}
-    alt='Caffe Latte'
-  />
 
-  <Stack>
-    <CardBody>
-      <Heading size='md'> 1 Hackathon</Heading>
-
-      <Text py='2'>
-        1st hackathon of HAT.
-      </Text>
-    </CardBody>
-
-    <CardFooter>
-      <Button variant={"solid"} bgColor={'#c961de'}>
-        Join
-      </Button >
-      <Button variant='solid' bgGradient={"linear-gradient(315deg, #facc6b 0%, #fabc3c 74%)"} mx={"10"}>
-      1000$
-      </Button>
-      <Button variant='solid'  bgColor={"#1c1c65"}>
-      550 hackers
-      </Button>
-    </CardFooter>
-  </Stack>
-</Card>
 
 
     </VStack>
   </CardBody>
 </Card>
 
-<Card  bgColor={"whiteAlpha.100"} width={"300px"}>
+<Card  bgColor={"whiteAlpha.100"}w={"300px"} mx={isMobile ? "100" : ""}>
   <CardBody >
     <Center>
             
-        <Avatar objectFit="contain" w="150px" h="150px"  borderWidth={"5px"} borderColor={"red"}
+        <Avatar objectFit="contain" w="150px" h="150px"  borderWidth={"5px"} borderColor={"purple"}
         src={img2}
       alt='Green double couch with wooden legs'     
     />

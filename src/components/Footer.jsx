@@ -14,7 +14,7 @@ const Footer = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
 
   return (
-    <Box bgColor="blackAlpha.900" minH="40" p="16" color="white" >
+    <Box bgColor="blackAlpha.900" minH="40" p="16" color="white"  >
       <Stack direction={['column', 'row']} spacing="4" alignItems={isMobile ? "center" : "flex-start"} flexWrap={isMobile ? "wrap" : "nowrap"}>
         <VStack w="full" alignItems={['center', 'center']}>
           <Heading size="md" textTransform="uppercase" textAlign={['center', 'left']}>
