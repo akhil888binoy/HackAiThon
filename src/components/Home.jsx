@@ -1,34 +1,22 @@
-import { Avatar, Box } from '@chakra-ui/react'
+import { Avatar, Box , 
+   ChakraProvider, 
+   Center, Image, 
+   Heading, Container,  
+   Stack, useMediaQuery, 
+   Card, CardHeader, 
+   CardBody, CardFooter,  
+   Text , Button , 
+   Divider, HStack, 
+   VStack, ButtonGroup } from '@chakra-ui/react'
 import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import img1 from "../assets/1.png"
 import img3 from "../assets/3.png"
 import "@fontsource/poppins";
 import { Carousel } from 'react-responsive-carousel';
-import { Image } from '@chakra-ui/react';
-import { Heading } from '@chakra-ui/react';
-import { Container } from '@chakra-ui/react';
-import { Text } from '@chakra-ui/react';
-import { Stack, useMediaQuery } from '@chakra-ui/react';
-import { Button } from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
-import { Divider } from '@chakra-ui/react';
-import { ButtonGroup } from '@chakra-ui/react';
-import { HStack, VStack } from '@chakra-ui/react';
 import { useEffect , useState} from 'react';
-import { ScaleFade } from '@chakra-ui/react';
-import { ChakraProvider, Center } from '@chakra-ui/react';
 import img2 from "../assets/2.png"
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-} from '@chakra-ui/react'
-
-
-
+import hackathonData from "../server/home.json"
 
 
 
@@ -66,6 +54,13 @@ const hackathonOptions={
     p:"4",
     size:"4x1",
 }
+const locationOptions={
+  position : "absolute",
+   left:"90%",
+    top : "12%",
+    transform : "translate(-50%, -50%)",
+    px:"4"
+}
 
 const hackathonfooterOptions={
   position : "absolute",
@@ -87,6 +82,10 @@ const theme = {
 
 const Home = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [hackthonItems, setHackthonItems] = useState([]);
+  useEffect(() => {
+    setHackthonItems(hackathonData);
+  }, []);
 
   useEffect(() => {
     setIsOpen(true);
@@ -151,7 +150,7 @@ const Home = () => {
           <Image src={img1} h={isMobile ? "1500px" : "full"} w={'full'} objectFit={'strech'}/>
           <ChakraProvider></ChakraProvider>
           <Container  minH={"100vh"}  
-        maxW={"container.xl"} {...cardOptions}  top={isMobile ? "50%" : "55%"}
+        maxW={"container.xl"} {...cardOptions}  top={isMobile ? "50%" : "60%"}
          >
             <Stack h='full'
             
@@ -212,18 +211,19 @@ const Home = () => {
   </CardBody>
 </Card>
 
-<Card  bgColor={"whiteAlpha.200"} width={"1000px"} >
+<Card  bgColor={"whiteAlpha.200"} width={"1000px"} className='HackathonsCard'>
   <CardBody>
     <Center>
     <Heading size='lg'>Hackathons For You </Heading>
     </Center>
     <VStack mt='6' spacing='3'>
+    {hackthonItems.map((hackathon, index) => (
 
 <Card
   direction={{ base: 'column', sm: 'row' }}
   overflow='hidden'
   variant='outline'
-  maxW={"600px"}
+  maxW={"600px"} key={index}
 >
   <Image
     objectFit='cover'
@@ -238,20 +238,20 @@ const Home = () => {
     src={img3}
     alt='Caffe Latte'
   />
+   <Text  fontSize={isMobile ? "10px" : "15px"} borderRadius={"10px"} {...locationOptions} bgColor={"teal"} textAlign={"center"}>
+        {hackathon.location}
+    </Text>
     <CardBody {...hackathonOptions}  >
-    <Stack direction={"row"} spacing={isMobile ? "2" : "5"}> 
-    <Heading size={isMobile ? "sm" : "md"}> 1 Hackathon</Heading>
-        <Text  px={isMobile ? "2" : "2"} fontSize={isMobile ? "10px" : "15px"} borderRadius={"10px"} bgColor={"teal"}>
-        Online
-      </Text>
-      </Stack>
+   
+    <Heading size={isMobile ? "sm" : "md"}> {hackathon.NameOfHackathon}</Heading>
+        
      
         
       <Text  my={isMobile ? "2" : "4"} px={isMobile ? "1" : "2"} fontWeight={"bold"} fontSize={isMobile ? "10px" : "15px"} borderRadius={"10px"} bgColor={"purple"}>
-        23 June 2023 - 25 June 2023
+        {hackathon.date}
       </Text>
       <Text  my={isMobile ? "1" : "4"}  mx={"2"} fontSize={isMobile ? "10px" : "15px"} >
-        IIT Kanpur
+        {hackathon.ConductedBy}
       </Text>
         
 
@@ -265,13 +265,13 @@ const Home = () => {
       $1000
       </Button>
       <Button variant='solid'  bgColor={"#1c1c65"} size={"sm"}  mr="10">
-      550 hackers
+      {hackathon.NoOfHackers} hackers
       </Button>
       
     </CardFooter>
   </Stack>
 </Card>
-
+))}
 
 
 
