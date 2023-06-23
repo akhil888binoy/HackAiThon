@@ -184,7 +184,7 @@ const Home = () => {
   variant='outline'
   h={"80px"}
    w={"350px"}
-  _hover={{ bgGradient:'linear(to-l, #7928CA, #FF0080)' }}
+  _hover={{ bgGradient:'linear-gradient(316deg, #310e68 0%, #5f0f40 74%)' }}
         sx={{
           "&:hover > *": {
             color: "white",
@@ -309,7 +309,7 @@ mt={"3"}
   variant='outline'
   size={"md"}
   maxH={"100px"}
-  _hover={{ bgGradient:'linear(to-l, #7928CA, #FF0080)' }}
+  _hover={{ bgGradient:'linear-gradient(316deg, #310e68 0%, #5f0f40 74%)' }}
         sx={{
           "&:hover > *": {
             color: "white",
@@ -332,66 +332,7 @@ mt={"3"}
     </CardBody>
   </Stack>
   </Card>
-  <Card
-  bgColor={"whiteAlpha.200"}
-  direction={{ base: 'column', sm: 'row' }}
-  overflow='hidden'
-  variant='outline'
-  size={"md"}
-  maxH={"100px"}
-  _hover={{bgGradient:'linear(to-l, #7928CA, #FF0080)' }}
-        sx={{
-          "&:hover > *": {
-            color: "white",
-          },
-        }}
->
-  <Avatar
-    mx={"3"}
-    mt={"3"}
-    objectFit='cover'
-    size={"lg"}
-    src={img2}
-    alt='Caffe Latte'
-  />
-
-  <Stack>
-    <CardBody objectFit={"contain"}>
-      <Heading size={"md"}>Akhil Binoy</Heading>
-      <Text fontSize={"10px"}>100 points</Text>
-    </CardBody>
-  </Stack>
-  </Card>
-  <Card
-  bgColor={"whiteAlpha.200"}
-  direction={{ base: 'column', sm: 'row' }}
-  overflow='hidden'
-  variant='outline'
-  size={"md"}
-  maxH={"100px"}
-  _hover={{bgGradient:'linear(to-l, #7928CA, #FF0080)' } }
-        sx={{ 
-          "&:hover > *": {
-            color: "white",
-          },
-        }}
->
-  <Avatar
-    mx={"3"}
-    mt={"3"}
-    objectFit='cover'
-    size={"lg"}
-    src={img2}
-    alt='Caffe Latte'
-  />
-
-  <Stack>
-    <CardBody objectFit={"contain"}>
-      <Heading size='md'>Akhil Binoy</Heading>
-      <Text fontSize={"10px"}>100 points</Text>
-    </CardBody>
-  </Stack>
-  </Card>
+  
     </VStack>
   </CardBody>
   
