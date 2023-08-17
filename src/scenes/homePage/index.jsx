@@ -10,13 +10,12 @@ import { Avatar, Box ,
     VStack, ButtonGroup } from '@chakra-ui/react'
  import React from 'react'
  import "react-responsive-carousel/lib/styles/carousel.min.css";
- import img1 from "../assets/1.png"
- import img3 from "../assets/3.png"
+ import img1 from "../../assets/1.png"
  import "@fontsource/poppins";
- import { Carousel } from 'react-responsive-carousel';
  import { useEffect , useState} from 'react';
- import img2 from "../assets/2.png"
- import hackathonData from "../dupliserver/home.json"
+ import img2 from "../../assets/2.png"
+ import hackathonData from "../../dupliserver/home.json"
+ import img3 from "../../assets/3.png"
  
  
  
@@ -80,7 +79,7 @@ import { Avatar, Box ,
    };
  
  
- const Home = () => {
+ const HomePage = () => {
    const [isOpen, setIsOpen] = React.useState(false);
    const [hackthonItems, setHackthonItems] = useState([]);
    useEffect(() => {
@@ -354,4 +353,4 @@ import { Avatar, Box ,
  
  
  
- export default Home
+ export default HomePage
