@@ -15,8 +15,11 @@ function App() {
     <Router>
       <Header></Header>
       <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route
+          path="/home"
+          element={isAuth ? <HomePage /> : <Navigate to="/" />}
+        />
         <Route path="/hackathons" element={<HackathonPage />} />
       </Routes>
       <Footer></Footer>
