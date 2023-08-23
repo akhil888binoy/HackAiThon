@@ -3,19 +3,18 @@ import { Avatar, Box ,
     Center, Image, 
     Heading, Container,  
     Stack, useMediaQuery, 
-    Card, CardHeader, 
+    Card,  
     CardBody, CardFooter,  
-    Text , Button , 
-    Divider, HStack, 
-    VStack, ButtonGroup } from '@chakra-ui/react'
- import React from 'react'
+    Text , Button ,  HStack, 
+    VStack } from '@chakra-ui/react';
+ import React from 'react';
  import "react-responsive-carousel/lib/styles/carousel.min.css";
- import img1 from "../../assets/1.png"
+ import img1 from "../../assets/1.png";
  import "@fontsource/poppins";
  import { useEffect , useState} from 'react';
- import img2 from "../../assets/2.png"
- import hackathonData from "../../dupliserver/home.json"
- import img3 from "../../assets/3.png"
+ import img2 from "../../assets/2.png";
+ import hackathonData from "../../dupliserver/home.json";
+ import img3 from "../../assets/3.png";
  
  
  

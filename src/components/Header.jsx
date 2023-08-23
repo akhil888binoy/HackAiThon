@@ -1,14 +1,11 @@
 import React from 'react'
-import { Radio , Icon, Avatar } from '@chakra-ui/react' 
-import { Drawer, Flex} from '@chakra-ui/react'
-import { DrawerOverlay  , DrawerContent, DrawerHeader, DrawerBody , Button , Stack, RadioGroup , useDisclosure} from '@chakra-ui/react'
-import { ColorModeSwitcher } from '../ColorModeSwitcher';
+import {  Avatar } from '@chakra-ui/react' 
+import { Drawer,} from '@chakra-ui/react'
+import { DrawerOverlay  , DrawerContent,  DrawerBody , Button  , useDisclosure} from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
-import { VStack , HStack } from '@chakra-ui/react'; 
-import { Heading } from '@chakra-ui/react';
-import { useState, useEffect } from 'react';
+import {  HStack } from '@chakra-ui/react'; 
 import img2 from "../assets/2.png";
-import { Image, Box } from '@chakra-ui/react';
+import {  Box } from '@chakra-ui/react';
 
 
 function Header() {

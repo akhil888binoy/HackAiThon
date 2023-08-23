@@ -3,17 +3,16 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import {  Box, Card, theme, FormControl, FormLabel , CardBody , ChakraProvider} from "@chakra-ui/react";
+import {  Box, Card, theme, FormControl,  CardBody , ChakraProvider} from "@chakra-ui/react";
 import { Center } from "@chakra-ui/react";
 import { setLogin } from "../../state";
 
   import { 
-    Container , 
-    VStack,
+   
     Heading, 
     Input, 
     Button, 
-    Link,
+    
     Text} from '@chakra-ui/react'
   
 

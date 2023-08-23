@@ -15,12 +15,16 @@ function App() {
     <Router>
       <Header></Header>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/" element={<HomePage />} />
         <Route
           path="/home"
-          element={isAuth ? <HomePage /> : <Navigate to="/" />}
+          element={isAuth ? <HomePage /> : <Navigate to="/login" />}
         />
-        <Route path="/hackathons" element={<HackathonPage />} />
+        <Route
+          path="/hackathons"
+          element={isAuth ? <HackathonPage /> : <Navigate to="/login" />}
+        />
       </Routes>
       <Footer></Footer>
     </Router>
