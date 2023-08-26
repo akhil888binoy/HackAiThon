@@ -7,7 +7,8 @@ import HomePage from './scenes/homePage';
 import LoginPage from './scenes/loginPage';
 import { useSelector } from 'react-redux';
 import HackathonPage from './scenes/hackathonPage';
-
+import HackerProfilePage from './scenes/hackerProfilePage';
+import HackathonDetail from './scenes/hackathonDetail';
 function App() {
   const isAuth = Boolean(useSelector(state => state.token));
 
@@ -21,10 +22,12 @@ function App() {
           path="/home"
           element={isAuth ? <HomePage /> : <Navigate to="/login" />}
         />
+        <Route path="/hackathons" element={<HackathonPage />} />
+        <Route path="/profile" element={<HackerProfilePage />} />
         <Route
-          path="/hackathons"
-          element={isAuth ? <HackathonPage /> : <Navigate to="/login" />}
-        />
+          path="/hackathondetail"
+          element={<HackathonDetail></HackathonDetail>}
+        ></Route>
       </Routes>
       <Footer></Footer>
     </Router>

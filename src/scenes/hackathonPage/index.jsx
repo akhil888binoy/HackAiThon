@@ -15,7 +15,8 @@ import {Box ,
  import img2 from "../../assets/2.png"
  import hackathonData from "../../dupliserver/home.json"
  import img3 from "../../assets/3.png"
-
+ import { Link } from 'react-router-dom';
+import HackathonDetail from '../hackathonDetail/HackathonDetailPage';
 const cardOptions={
   position : "absolute",
    left:"50%",
@@ -169,7 +170,8 @@ alt='Caffe Latte'
 
 <CardFooter {...hackathonfooterOptions}>
   <Button variant={"solid"} bgColor={'#c961de'} size={isMobile ? "sm" : "sm"} borderRadius={isMobile ? "20px" : "40px"}  ml={"5"}>
-    Join
+    <Link to={"/hackathondetail"}>Join</Link>
+    
   </Button >
   <Button variant='solid' bgGradient={"linear-gradient(315deg, #facc6b 0%, #fabc3c 74%)"} mx={isMobile ? "4" : "9"} size={"sm"}>
   $1000

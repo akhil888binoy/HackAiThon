@@ -2,14 +2,13 @@ import {  Box ,  Image,  } from '@chakra-ui/react'
  import React from 'react'
  import img1 from "../../assets/1.png"
  import "@fontsource/poppins";
- import ProfilePage from './ProfilePage';
+ import HackathonDetailPage from './HackathonDetailPage';
  
  
  
  
  
- 
- const HackerProfilePage = () => {
+ const HackathonDetail = () => {
    
    
  
@@ -24,7 +23,7 @@ import {  Box ,  Image,  } from '@chakra-ui/react'
           <Box w="full" h={'full'}>
                   <Image src={img1} h="100vh" w={'full'} objectFit={'cover'}/>
                   <Image src={img1} h="100vh" w={'full'} objectFit={'cover'}/>
-                       <ProfilePage></ProfilePage>
+                       <HackathonDetailPage></HackathonDetailPage>
                  
                  
          </Box>
@@ -41,4 +40,4 @@ import {  Box ,  Image,  } from '@chakra-ui/react'
  
  
  
- export default HackerProfilePage
+ export default HackathonDetail
