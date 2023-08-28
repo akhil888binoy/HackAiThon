@@ -72,8 +72,8 @@ const ProfilePage = () => {
     <Card  bgColor={"whiteAlpha.100"}  width={"70rem"} className='SignUpForm' mt={"2rem"} >
       <CardBody>
         <Stack direction={"column"}>
-            <HStack gap={"20%"}>
-            <Avatar objectFit="contain" w="150px" h="150px"  borderWidth={"5px"} borderColor={"purple"}
+            <HStack gap={isMobile ? "2rem": "20%"} ml={isMobile ? "30%": ""} mt={isMobile? "20rem":""}>
+            <Avatar objectFit="contain" w={isMobile ? "150px": "150px"} h="150px"  borderWidth={"5px"} borderColor={"purple"}
          src={img2}
        alt='Green double couch with wooden legs'     
      />
@@ -87,7 +87,7 @@ const ProfilePage = () => {
 
             </HStack>
         <VStack>
-            <Card bgColor={"whiteAlpha.100"} width={"65rem"} mt={"2rem"}  >
+            <Card bgColor={"whiteAlpha.100"} width={ isMobile? "30rem" :"65rem"} mt={"2rem"}  >
                 <CardBody>
                     <VStack >
                         <Heading size={"lg"}  >Bio</Heading>
@@ -102,7 +102,7 @@ const ProfilePage = () => {
                 </CardBody>
             </Card>
             <HStack>
-                    <Card className='Project' bgColor={"blueviolet"} width={"40rem"} mt={"2rem"}>
+                    <Card className='Project' bgColor={"blueviolet"} width={ isMobile? "":"40rem"} mt={"2rem"}>
                         <CardBody>
                             <VStack>
                                 <Heading size={"lg"}>Project Submitted</Heading>
