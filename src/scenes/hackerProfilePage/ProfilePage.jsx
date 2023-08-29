@@ -69,19 +69,19 @@ const ProfilePage = () => {
       
       
     <ChakraProvider theme={theme} >
-    <Card  bgColor={"whiteAlpha.100"}  width={"70rem"} className='SignUpForm' mt={"2rem"} >
+    <Card  bgColor={"whiteAlpha.100"}  width={isMobile? "30rem ":"70rem"} className='SignUpForm' mt={"2rem"} >
       <CardBody>
         <Stack direction={"column"}>
-            <HStack gap={isMobile ? "2rem": "20%"} ml={isMobile ? "30%": ""} mt={isMobile? "20rem":""}>
+            <HStack gap={isMobile ? "2rem": "20%"} ml={isMobile ? "20%": ""} mt={isMobile? "20rem":""}>
             <Avatar objectFit="contain" w={isMobile ? "150px": "150px"} h="150px"  borderWidth={"5px"} borderColor={"purple"}
          src={img2}
        alt='Green double couch with wooden legs'     
      />
      <VStack>
      <Heading > Sophie Fortune</Heading>
-     <HStack>
-        <Text>followers</Text>
-        <Text>following</Text>
+     <HStack >
+        <Text>100 followers</Text>
+        <Text> 100 following</Text>
      </HStack>
      </VStack>
 
@@ -101,7 +101,7 @@ const ProfilePage = () => {
 
                 </CardBody>
             </Card>
-            <HStack>
+            <Stack direction={isMobile? "column": "row"}>
                     <Card className='Project' bgColor={"blueviolet"} width={ isMobile? "":"40rem"} mt={"2rem"}>
                         <CardBody>
                             <VStack>
@@ -113,7 +113,8 @@ const ProfilePage = () => {
    direction={{ base: 'column', sm: 'row' }}
    overflow='hidden'
    variant='outline'
-   maxW={"600px"} key={index}
+   w={isMobile? "450px":"600px"} key={index}
+  
  >
    <Image
      objectFit='cover'
@@ -155,7 +156,7 @@ const ProfilePage = () => {
                             </VStack>
                         </CardBody>
                     </Card>
-                    <Card className='Achievements' bgColor={"blueviolet"} width={"400px"} mt={"2rem"}>
+                    <Card className='Achievements' bgColor={"blueviolet"} width={"400px"} mt={"2rem"} ml={isMobile? "3rem":" "}>
                         <CardBody>
                             <VStack>
                                 <Heading size={"lg"}>Achievements</Heading>
@@ -191,7 +192,7 @@ const ProfilePage = () => {
                         </CardBody>
                     </Card>
 
-                   </HStack>
+                   </Stack>
         </VStack>
             
         </Stack>      

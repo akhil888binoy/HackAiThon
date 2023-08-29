@@ -38,7 +38,7 @@ const cardOptions={
 
 const hackathonOptions={
   position : "absolute",
-   left:"55%",
+   
     top : "38%",
     transform : "translate(-50%, -50%)",
     p:"4",
@@ -54,7 +54,7 @@ const locationOptions={
 
 const hackathonfooterOptions={
   position : "absolute",
-   left:"70%",
+  
     top : "82%",
     transform : "translate(-50%, -50%)",
     p:"4",
@@ -86,11 +86,16 @@ const HackathonPage = () => {
     
     <Box w={"full"} h={"full"} >
       <Image src={img1} h={isMobile ? "1500px" : "full"} w={'full'} objectFit={'strech'}/>
+      {
+        isMobile&&(
+          <Image src={img1} h={isMobile ? "1500px" : "full"} w={'full'} objectFit={'strech'}/>
+        )
+      }
       <ChakraProvider theme={theme}></ChakraProvider>
 
       
       <Container  minH={"100vh"}  backdropFilter='auto' backdropBlur='8px'
-    maxW={"container.xl"} {...cardOptions}  top={isMobile ? "40%" : "40%"}
+    maxW={"container.xl"} {...cardOptions}  top={isMobile ? "30%" : "40%"}
      >
      
       <Center>
@@ -286,14 +291,17 @@ direction={{ base: 'column', sm: 'row' }}
 overflow='hidden'
 variant='outline'
 w={isMobile ? "400px" : "700px"} key={index}
-h={isMobile ? "15rem" : ""}
+h={isMobile ? "30rem" : ""}
 
 >
-<Image
+  <Stack direction={isMobile? "column":"row"} gap={"none"}>
+
+  <Image
 objectFit='cover'
-w={isMobile ? "140px" : "200px"}
+w={isMobile ? "30rem" : "220px"}
 src={img2}
 alt='Caffe Latte'
+
 />
 
 <Stack >
@@ -304,16 +312,17 @@ alt='Caffe Latte'
 h={isMobile ? "20rem" : ""}
 w={isMobile ? "" : "50rem"}
 />
-<Text   fontSize={isMobile ? "15px" : "15px"}  borderRadius={"10px"} {...locationOptions} bgColor={"teal"} textAlign={"center"}>
+<Text   fontSize={isMobile ? "15px" : "15px"}  borderRadius={"10px"} {...locationOptions} bgColor={"teal"} textAlign={"center"} mb={isMobile? "5%" : ""} >
     {hackathon.location}
 </Text>
-<CardBody {...hackathonOptions}  >
 
-<Heading size={isMobile ? "md" : "md"} > {hackathon.NameOfHackathon}</Heading>
+<CardBody {...hackathonOptions}  ml={"10rem"}  >
+ 
+<Heading size={isMobile ? "lg" : "lg"} mt={isMobile?"18rem" : " "} > {hackathon.NameOfHackathon}</Heading>
     
  
     
-  <Text  my={isMobile ? "2" : "4"} px={isMobile ? "5" : "2"}  fontWeight={"bold"} fontSize={isMobile ? "15px" : "15px"} borderRadius={"10px"} bgColor={"purple"}>
+  <Text  my={isMobile ? "3" : "4"} px={isMobile ? "5" : "2"}  fontWeight={"bold"} fontSize={isMobile ? "15px" : "15px"} borderRadius={"10px"} bgColor={"purple"}>
     {hackathon.date}
   </Text>
   <Text  my={isMobile ? "1" : "4"}  mx={"2"} fontSize={isMobile ? "15px" : "15px"} >
@@ -323,7 +332,7 @@ w={isMobile ? "" : "50rem"}
 
 </CardBody>
 
-<CardFooter {...hackathonfooterOptions}>
+<CardFooter {...hackathonfooterOptions} ml={isMobile? "50%": "38%"} mt={isMobile? "2rem":""} mr={isMobile?"10rem":""}>
   <Button variant={"solid"} bgColor={'#c961de'} size={isMobile ? "sm" : "lg"} borderRadius={isMobile ? "20px" : "40px"}  ml={"5"}>
     <Link to={"/hackathondetail"}>Join</Link>
     
@@ -337,6 +346,9 @@ w={isMobile ? "" : "50rem"}
   
 </CardFooter>
 </Stack>
+    
+  </Stack>
+
 </Card>
 ))}
 
