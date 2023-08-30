@@ -38,10 +38,7 @@ const cardOptions={
 
 const hackathonOptions={
   position : "absolute",
-   
-    top : "38%",
     transform : "translate(-50%, -50%)",
-    p:"4",
     size:"4x1",
 }
 const locationOptions={
@@ -112,7 +109,7 @@ const HackathonPage = () => {
           {
             isMobile&&(
               <>
-            <Button ref={btnRef}  color='white' padding={ "5"} borderRadius={"25"} fontSize={isMobile ? "md" : "lg"} fontWeight={"bold"} width={ isMobile ? "10rem" : "25rem"}  h={"3rem"} bgColor="#6617cb"   ml={isMobile ? "9rem" : " "} mt={isMobile ? "2rem" : ""} mb={isMobile ? "3rem": ""}
+            <Button ref={btnRef}  color='white' padding={ "5"} borderRadius={"25"} fontSize={isMobile ? "md" : "lg"} fontWeight={"bold"} width={ isMobile ? "10rem" : "25rem"}  h={"3rem"} bgColor="#6617cb"   ml={isMobile ? "" : " "} mt={isMobile ? "2rem" : ""} mb={isMobile ? "3rem": ""}
                              bgImage="linear-gradient(315deg, #6617cb 0%, #cb218e 74%)"  _hover={{ bg: "#c961de" }}
                              sx={{
                                "&:hover > *": {
@@ -278,8 +275,8 @@ const HackathonPage = () => {
 
 //Hackathons
 
-<Card  bgColor={"whiteAlpha.200"} width={"1000px"} className='HackathonsCard' mt={isMobile ? "" : "25px"} >
-<CardBody>
+<Card  bgColor={"whiteAlpha.200"} width={isMobile?"340px" : "1000px"} className='HackathonsCard' mt={isMobile ? "" : "25px"} >
+<CardBody >
 <Center>
 <Heading size='lg'>Hackathons For You </Heading>
 </Center>
@@ -290,7 +287,7 @@ const HackathonPage = () => {
 direction={{ base: 'column', sm: 'row' }}
 overflow='hidden'
 variant='outline'
-w={isMobile ? "400px" : "700px"} key={index}
+w={isMobile ? "330px" : "700px"} key={index}
 h={isMobile ? "30rem" : ""}
 
 >
@@ -316,7 +313,7 @@ w={isMobile ? "" : "50rem"}
     {hackathon.location}
 </Text>
 
-<CardBody {...hackathonOptions}  ml={"10rem"}  >
+<CardBody {...hackathonOptions}  ml={"7rem"} mt={isMobile  ? "" : "13%"} mb={isMobile? "10%" : ""}>
  
 <Heading size={isMobile ? "lg" : "lg"} mt={isMobile?"18rem" : " "} > {hackathon.NameOfHackathon}</Heading>
     
@@ -332,7 +329,7 @@ w={isMobile ? "" : "50rem"}
 
 </CardBody>
 
-<CardFooter {...hackathonfooterOptions} ml={isMobile? "50%": "38%"} mt={isMobile? "2rem":""} mr={isMobile?"10rem":""}>
+<CardFooter {...hackathonfooterOptions} ml={isMobile? "50%": "38%"} mt={isMobile? "3rem":""} mr={isMobile?"10rem":""}>
   <Button variant={"solid"} bgColor={'#c961de'} size={isMobile ? "sm" : "lg"} borderRadius={isMobile ? "20px" : "40px"}  ml={"5"}>
     <Link to={"/hackathondetail"}>Join</Link>
     

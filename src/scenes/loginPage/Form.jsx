@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import {  Box, Card, theme, FormControl,  CardBody , ChakraProvider} from "@chakra-ui/react";
 import { Center } from "@chakra-ui/react";
 import { setLogin } from "../../state";
+import { useMediaQuery } from "@chakra-ui/react";
 
   import { 
    
@@ -63,6 +64,9 @@ const Form = () => {
   const navigate = useNavigate();
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
+
+
 
   const register = async (values, onSubmitProps) => {
     // this allows us to send form info with image
@@ -138,7 +142,7 @@ const Form = () => {
       
       
       <ChakraProvider theme={theme} >
-      <Card  bgColor={"whiteAlpha.100"}  width={"500px"} className='SignUpForm' mt={"2rem"} >
+      <Card  bgColor={"whiteAlpha.100"}  width={isMobile? "340px" : "500px"} className='SignUpForm' mt={isMobile? "10rem" :"2rem"} >
         <CardBody>
         <Heading textAlign="center" size="xl" mb="6">
         {isLogin ? "Login": "Sign Up"}
