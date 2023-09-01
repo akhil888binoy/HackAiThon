@@ -6,10 +6,12 @@ import { Link } from 'react-router-dom';
 import {  HStack } from '@chakra-ui/react'; 
 import img2 from "../assets/2.png";
 import {  Box } from '@chakra-ui/react';
-
+import { useMediaQuery } from '@chakra-ui/react';
 
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
+
   
   return (
     <>
@@ -38,7 +40,7 @@ function Header() {
       <DrawerContent bgColor={"whiteAlpha.100"}>
         <DrawerBody >
         <HStack justifyContent={"center"}>
-                    <Button onClick={onClose}  variant={"ghost"} textColor={'white'} _hover={{ bg: "#c961de" }}
+                    <Button onClick={onClose}  variant={"ghost"} size={isMobile?"sm" : "md"} textColor={'white'} _hover={{ bg: "#c961de" } }
         sx={{
           "&:hover > *": {
             color: "white",
@@ -46,7 +48,7 @@ function Header() {
         }}>
                         <Link to={'/Login'}>Login</Link>
                     </Button>
-                    <Button onClick={onClose}  variant={"ghost"} textColor={'white'} _hover={{ bg: "#c961de" }}
+                    <Button onClick={onClose}  variant={"ghost"} size={isMobile?"sm" : "md"} textColor={'white'} _hover={{ bg: "#c961de" }}
         sx={{
           "&:hover > *": {
             color: "white",
@@ -55,9 +57,9 @@ function Header() {
                         <Link to={'/hackathons'}>Hackathons</Link>
                     </Button>
                     <Box mx={4}>
-                            < Avatar src={img2} alt="Logo" variant={"ghost"} objectFit="contain" w="80px" h="80px"   />
+                            < Avatar src={img2} alt="Logo" variant={"ghost"} objectFit="contain"   size={isMobile?"md" : "lg"} />
                      </Box>
-                    <Button onClick={onClose}  variant={"ghost"} textColor={'white'} _hover={{ bg: "#c961de" }}
+                    <Button onClick={onClose}  variant={"ghost"} size={isMobile?"sm" : "md"} textColor={'white'} _hover={{ bg: "#c961de" }}
         sx={{
           "&:hover > *": {
             color: "white",
@@ -65,7 +67,7 @@ function Header() {
         }}>
                         <Link to={'/AboutUs'}>About Us</Link>
                     </Button>
-                    <Button onClick={onClose}  variant={"ghost"} textColor={'white'} _hover={{ bg: "#c961de" }}
+                    <Button onClick={onClose} size={isMobile?"sm" : "md"} variant={"ghost"} textColor={'white'} _hover={{ bg: "#c961de" }}
         sx={{
           "&:hover > *": {
             color: "white",

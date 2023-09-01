@@ -16,7 +16,6 @@ import {
   import { useDisclosure } from '@chakra-ui/react'
 const headingOptions={
     position : "absolute",
-    
     transform : "translate(-50%, -50%)",
     p:"2",
     top:"35rem",
@@ -30,9 +29,9 @@ const HackathonDetailPage = () => {
     const btnRef = React.useRef()
 
   return (
-    <Box {...headingOptions} backdropFilter='auto'  width={isMobile ? "50rem" : "120rem"} backdropBlur='8px'  h={isMobile ? " 55rem" : "55rem"} ml={isMobile ? " 4rem" : "22%"} >
+    <Box {...headingOptions} backdropFilter='auto'   backdropBlur='8px'  width={isMobile ? "28rem" : "75rem"}  h={isMobile ? " 60rem" : "55rem"} bgColor={"red"}  ml={"10rem"} mt={"10rem"}>
         <Container>
-            <Card  bgColor={"whiteAlpha.100"}  width={isMobile ? "28rem" : "75rem"} className='main'  h={isMobile ? " 60rem" : "55rem"} ml={ isMobile ? " 12rem" : "2%"} >
+            <Card  bgColor={"whiteAlpha.100"}  width={isMobile ? "28rem" : "75rem"} className='main'  h={isMobile ? " 60rem" : "55rem"} ml={ isMobile ? "" : "20rem"} mt={isMobile?"10rem" : ""} >
                 <CardBody >
                     <VStack>
                         <HStack gap={isMobile ? "5rem" : "15rem"} mr={isMobile ? "10rem" : " "}>
@@ -126,8 +125,8 @@ const HackathonDetailPage = () => {
 
                             )}
                             
-                            <Container className='SideButtons' position={"absolute"}  >
-                                <VStack mr={isMobile ? "20rem" : " "} >
+                            <Container className='SideButtons' position={"absolute"}  display={isMobile? "none" : ""}>
+                                <VStack  >
                                 <Button color='white' padding={ "5"} borderRadius={"20"} width={ "200px"}  h={"1rem"} bgColor="#6617cb" mt={"1rem"} 
                              bgImage="linear-gradient(315deg, #6617cb 0%, #cb218e 74%)"  _hover={{ bg: "#c961de" }}
                              sx={{

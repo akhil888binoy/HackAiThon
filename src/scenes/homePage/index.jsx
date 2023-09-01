@@ -46,8 +46,8 @@ import { Avatar, Box ,
  
  const hackathonOptions={
    position : "absolute",
-    left:"55%",
-     top : "38%",
+    
+    
      transform : "translate(-50%, -50%)",
      p:"4",
      size:"4x1",
@@ -62,8 +62,8 @@ import { Avatar, Box ,
  
  const hackathonfooterOptions={
    position : "absolute",
-    left:"70%",
-     top : "82%",
+    
+     
      transform : "translate(-50%, -50%)",
      p:"4",
      size:"4x1",
@@ -101,7 +101,7 @@ import { Avatar, Box ,
      <Box>
         
           <Box w="full" h={'full'}>
-                  <Image src={img1} h="100vh" w={'full'} objectFit={'cover'}/>
+                  <Image src={img1} h="100vh" w={isMobile? "" :'full'} objectFit={'cover'}/>
                   <ChakraProvider theme={theme}>
                   <Heading  textColor={"white"}  fontSize={isMobile ? "30px" : "40px"} {...headingOptions} top={isMobile ? "13%" : "17%"} fontFamily={"heading"}> Welcome to 
                        <Text bgGradient='linear(to-l, #7928CA, #FF0080)' bgClip='text' fontSize={isMobile ? "70px" : "100px"} > Hack AI Thon</Text> 
@@ -221,7 +221,7 @@ import { Avatar, Box ,
 direction={{ base: 'column', sm: 'row' }}
 overflow='hidden'
 variant='outline'
-w={isMobile ? "330px" : "700px"} key={index}
+w={isMobile ? "330px" : "650px"} key={index}
 h={isMobile ? "30rem" : ""}
 
 >
@@ -247,13 +247,13 @@ w={isMobile ? "" : "50rem"}
     {hackathon.location}
 </Text>
 
-<CardBody {...hackathonOptions}  ml={"7rem"} mt={isMobile  ? "" : "13%"} mb={isMobile? "10%" : ""}>
+<CardBody {...hackathonOptions}  ml={isMobile? "7rem" : "10rem"}  mt={isMobile  ? "1rem" : "5rem"} mb={isMobile? "10rem" : ""}>
  
-<Heading size={isMobile ? "lg" : "lg"} mt={isMobile?"18rem" : " "} > {hackathon.NameOfHackathon}</Heading>
+<Heading size={isMobile ? "lg" : "lg"} mt={isMobile?"18rem" : " "}> {hackathon.NameOfHackathon}</Heading>
     
  
     
-  <Text  my={isMobile ? "3" : "4"} px={isMobile ? "5" : "2"}  fontWeight={"bold"} fontSize={isMobile ? "15px" : "15px"} borderRadius={"10px"} bgColor={"purple"}>
+  <Text  my={isMobile ? "3" : "4"} px={isMobile ? "1" : "2"}  fontWeight={"bold"} fontSize={isMobile ? "15px" : "15px"} borderRadius={"10px"} bgColor={"purple"}>
     {hackathon.date}
   </Text>
   <Text  my={isMobile ? "1" : "4"}  mx={"2"} fontSize={isMobile ? "15px" : "15px"} >
@@ -263,15 +263,15 @@ w={isMobile ? "" : "50rem"}
 
 </CardBody>
 
-<CardFooter {...hackathonfooterOptions} ml={isMobile? "50%": "38%"} mt={isMobile? "3rem":""} mr={isMobile?"10rem":""}>
-  <Button variant={"solid"} bgColor={'#c961de'} size={isMobile ? "sm" : "lg"} borderRadius={isMobile ? "20px" : "40px"}  ml={"5"}>
+<CardFooter {...hackathonfooterOptions} ml={isMobile? "11rem": "15rem"} mt={isMobile? "3rem":"11rem"} mr={isMobile?"10rem":""} >
+  <Button variant={"solid"} bgColor={'#c961de'} size={isMobile ? "sm" : "md"} borderRadius={isMobile ? "20px" : "40px"}  ml={"5"}>
     <Link to={"/hackathondetail"}>Join</Link>
     
   </Button >
-  <Button variant='solid' bgGradient={"linear-gradient(315deg, #facc6b 0%, #fabc3c 74%)"} mx={isMobile ? "4" : "9"} size={isMobile ? "sm" : "lg"}>
+  <Button variant='solid' bgGradient={"linear-gradient(315deg, #facc6b 0%, #fabc3c 74%)"} mx={isMobile ? "4" : "9"} size={isMobile ? "sm" : "md"}>
   $1000
   </Button>
-  <Button variant='solid'  bgColor={"#1c1c65"} size={isMobile ? "sm" : "lg"}  mr="10">
+  <Button variant='solid'  bgColor={"#1c1c65"} size={isMobile ? "sm" : "md"}  mr="10" >
   {hackathon.NoOfHackers} hackers
   </Button>
   

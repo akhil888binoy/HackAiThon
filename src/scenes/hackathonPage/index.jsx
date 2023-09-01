@@ -330,14 +330,14 @@ w={isMobile ? "" : "50rem"}
 </CardBody>
 
 <CardFooter {...hackathonfooterOptions} ml={isMobile? "50%": "38%"} mt={isMobile? "3rem":""} mr={isMobile?"10rem":""}>
-  <Button variant={"solid"} bgColor={'#c961de'} size={isMobile ? "sm" : "lg"} borderRadius={isMobile ? "20px" : "40px"}  ml={"5"}>
+  <Button variant={"solid"} bgColor={'#c961de'} size={isMobile ? "sm" : "md"} borderRadius={isMobile ? "20px" : "40px"}  ml={"5"}>
     <Link to={"/hackathondetail"}>Join</Link>
     
   </Button >
-  <Button variant='solid' bgGradient={"linear-gradient(315deg, #facc6b 0%, #fabc3c 74%)"} mx={isMobile ? "4" : "9"} size={isMobile ? "sm" : "lg"}>
+  <Button variant='solid' bgGradient={"linear-gradient(315deg, #facc6b 0%, #fabc3c 74%)"} mx={isMobile ? "4" : "9"} size={isMobile ? "sm" : "md"}>
   $1000
   </Button>
-  <Button variant='solid'  bgColor={"#1c1c65"} size={isMobile ? "sm" : "lg"}  mr="10">
+  <Button variant='solid'  bgColor={"#1c1c65"} size={isMobile ? "sm" : "md"}  mr="10">
   {hackathon.NoOfHackers} hackers
   </Button>
   
