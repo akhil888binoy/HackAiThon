@@ -36,7 +36,7 @@ const UserSchema = new mongoose.Schema(
       default: '',
     },
     bio: {
-      type: Text,
+      type: String,
       default: ' ',
     },
     socialmedia: {
