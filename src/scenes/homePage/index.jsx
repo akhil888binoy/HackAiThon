@@ -16,6 +16,7 @@ import { Avatar, Box ,
  import hackathonData from "../../dupliserver/home.json";
  import img3 from "../../assets/3.png";
  import { Link } from 'react-router-dom';
+ import { Tooltip } from '@chakra-ui/react';
  
  
  
@@ -79,23 +80,34 @@ import { Avatar, Box ,
  
  
  const HomePage = () => {
-   const [isOpen, setIsOpen] = React.useState(false);
-   const [hackthonItems, setHackthonItems] = useState([]);
-   useEffect(() => {
-     setHackthonItems(hackathonData);
-   }, []);
- 
-   useEffect(() => {
-     setIsOpen(true);
-   }, []);
-   
- 
-     const [isMobile] = useMediaQuery("(max-width: 768px)");
-     const [showText, setShowText] = React.useState(true);
- 
-   
- 
- 
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [hackthonItems, setHackthonItems] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    setHackthonItems(hackathonData);
+  }, []);
+
+  useEffect(() => {
+    setIsOpen(true);
+  }, []);
+
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
+
+  const itemsPerPage = 3;
+  const totalPages = Math.ceil(hackthonItems.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const visibleHackathonItems = hackthonItems.slice(startIndex, endIndex);
+
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
+  };
+
+  const handlePrevPage = () => {
+    setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
+  };
+
    return (
      
      <Box>
@@ -215,7 +227,7 @@ import { Avatar, Box ,
 <Heading size='lg'>Hackathons For You </Heading>
 </Center>
 <VStack mt='6' spacing='3'>
-{hackthonItems.map((hackathon, index) => (
+{visibleHackathonItems.map((hackathon, index) => (
 
 <Card
 direction={{ base: 'column', sm: 'row' }}
@@ -287,6 +299,15 @@ w={isMobile ? "" : "50rem"}
 
 
 </VStack>
+<HStack gap={"30rem"} mt={"1rem"}>
+<Button onClick={handlePrevPage} disabled={currentPage === 1} bgColor={"violet"}>
+            Prev
+          </Button>
+          <Button onClick={handleNextPage} disabled={currentPage === totalPages} bgColor={"violet"}>
+            Next
+          </Button>
+         
+        </HStack>
 </CardBody>
 </Card>
  

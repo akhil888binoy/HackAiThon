@@ -1,0 +1,88 @@
+[
+    {
+        "projectName": "Tic Tac Toe Game",
+        "githubLink": "https://github.com/codecrafters/tic-tac-toe",
+        "youtubeLink": "https://www.youtube.com/watch?v=video1",
+        "aboutProject": "A classic Tic Tac Toe game implemented in JavaScript. Play and sharpen your strategic skills with CodeCrafters!",
+        "teamName": "CodeCrafters"
+      },
+      
+    {
+      "projectName": "DataVis Pro",
+      "githubLink": "https://github.com/datavispro/datavis",
+      "youtubeLink": "https://www.youtube.com/watch?v=video2",
+      "aboutProject": "Advanced data visualization tool for analysts, data scientists. Unlock insights with DataVis Pro!",
+      "teamName": "DataVis Team"
+    },
+    {
+      "projectName": "GreenTech Solutions",
+      "githubLink": "https://github.com/greentech/solutions",
+      "youtubeLink": "https://www.youtube.com/watch?v=video3",
+      "aboutProject": "Sustainable technology solutions for a greener future. Join EcoInnovators for a cleaner, better world!",
+      "teamName": "EcoInnovators"
+    },
+    {
+      "projectName": "SmartHome Automation",
+      "githubLink": "https://github.com/smarthome/automation",
+      "youtubeLink": "https://www.youtube.com/watch?v=video4",
+      "aboutProject": "Automating home processes for convenience, energy efficiency. Experience the future with HomeTech Wizards!",
+      "teamName": "HomeTech Wizards"
+    },
+    {
+      "projectName": "AI Chatbot Assistant",
+      "githubLink": "https://github.com/aichatbot/assistant",
+      "youtubeLink": "https://www.youtube.com/watch?v=video5",
+      "aboutProject": "AI-powered chatbot providing assistance in natural language. Chat with ease with BotMasters!",
+      "teamName": "BotMasters"
+    },
+    {
+      "projectName": "EduHub Learning Platform",
+      "githubLink": "https://github.com/eduhub/learning-platform",
+      "youtubeLink": "https://www.youtube.com/watch?v=video6",
+      "aboutProject": "Comprehensive platform for online education, collaboration. Join EduTech Innovators for a brighter future!",
+      "teamName": "EduTech Innovators"
+    },
+    {
+      "projectName": "CloudConnect",
+      "githubLink": "https://github.com/cloudconnect/project",
+      "youtubeLink": "https://www.youtube.com/watch?v=video7",
+      "aboutProject": "Connecting businesses with cloud solutions. Elevate your operations with CloudConnect!",
+      "teamName": "CloudConnect Team"
+    },
+    {
+      "projectName": "HealthTracker App",
+      "githubLink": "https://github.com/healthtracker/app",
+      "youtubeLink": "https://www.youtube.com/watch?v=video8",
+      "aboutProject": "Track your health and wellness journey with HealthTracker. Your personal health companion!",
+      "teamName": "HealthTracker Team"
+    },
+    {
+      "projectName": "SmartCity Solutions",
+      "githubLink": "https://github.com/smartcity/solutions",
+      "youtubeLink": "https://www.youtube.com/watch?v=video9",
+      "aboutProject": "Building smarter cities with innovative solutions. Join SmartCity for a sustainable future!",
+      "teamName": "SmartCity Innovators"
+    },
+    {
+      "projectName": "FoodieHub",
+      "githubLink": "https://github.com/foodiehub/app",
+      "youtubeLink": "https://www.youtube.com/watch?v=video10",
+      "aboutProject": "Discover, share, and enjoy culinary delights with FoodieHub. Your go-to app for food enthusiasts!",
+      "teamName": "FoodieHub Explorers"
+    },
+    {
+      "projectName": "TravelBuddy",
+      "githubLink": "https://github.com/travelbuddy/app",
+      "youtubeLink": "https://www.youtube.com/watch?v=video11",
+      "aboutProject": "Plan your adventures, connect with fellow travelers. TravelBuddy - your ultimate travel companion!",
+      "teamName": "TravelBuddy Adventurers"
+    },
+    {
+      "projectName": "CodeSecure",
+      "githubLink": "https://github.com/codesecure/app",
+      "youtubeLink": "https://www.youtube.com/watch?v=video12",
+      "aboutProject": "Ensuring code security with advanced encryption. CodeSecure - safeguarding your digital world!",
+      "teamName": "CodeSecure Team"
+    }
+  ]
+  

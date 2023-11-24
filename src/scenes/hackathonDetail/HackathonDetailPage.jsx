@@ -4,6 +4,7 @@ import { Card, CardBody,Container, HStack, VStack, Heading } from '@chakra-ui/re
 import img2 from "../../assets/2.png"
 import { Avatar, Button , Text} from '@chakra-ui/react'
 import { useMediaQuery } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 import {
     Drawer,
     DrawerBody,
@@ -24,31 +25,57 @@ const headingOptions={
 }
 
 const HackathonDetailPage = () => {
-    const [isMobile] = useMediaQuery("(max-width: 768px)");
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const btnRef = React.useRef()
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
+  const [joined, setJoined] = React.useState(false); // Track whether the user has joined
 
+  const handleJoin = () => {
+    setJoined(true);
+    // Add any additional logic you want when the user joins (e.g., API call, etc.)
+  };
   return (
-    <Box {...headingOptions} backdropFilter='auto'   backdropBlur='8px'  width={isMobile ? "28rem" : "75rem"}  h={isMobile ? " 60rem" : "55rem"} bgColor={"red"}  ml={"10rem"} mt={"10rem"}>
-        <Container>
-            <Card  bgColor={"whiteAlpha.100"}  width={isMobile ? "28rem" : "75rem"} className='main'  h={isMobile ? " 60rem" : "55rem"} ml={ isMobile ? "" : "20rem"} mt={isMobile?"10rem" : ""} >
-                <CardBody >
-                    <VStack>
-                        <HStack gap={isMobile ? "5rem" : "15rem"} mr={isMobile ? "10rem" : " "}>
-                            <Avatar src={img2} size={isMobile ? "lg" : "2xl"} ml={isMobile ? "20rem" : " "} mb={isMobile ? "10rem" : " "}></Avatar>
-                            <VStack mr={"14rem"}  >
-                            <Heading size={isMobile ? "lg" : "lg"} mr={isMobile ? "3rem" : " "} textAlign={"center"}> Hackathon Name</Heading>
-                            <Button color='white' padding={ "5"} borderRadius={"25"} fontSize={isMobile ? "md" : "lg"} fontWeight={"bold"} width={ isMobile ? "10rem" : "25rem"}  h={"3rem"} bgColor="#6617cb" mt={isMobile ? "2rem" : "1rem"}  mr={isMobile ? "3rem" : " "}
-                             bgImage="linear-gradient(315deg, #6617cb 0%, #cb218e 74%)"  _hover={{ bg: "#c961de" }}
-                             sx={{
-                               "&:hover > *": {
-                                 color: "white",
-                               },
-                             }}> 
-                          Apply Now
-                         </Button>
-                            </VStack>
-                        </HStack>
+    <Box {...headingOptions} backdropFilter='auto' backdropBlur='8px' width={isMobile ? "28rem" : "100rem"} h={isMobile ? " 60rem" : "55rem"} mt={"1rem"} ml={"35rem"}>
+    <Card bgColor={"whiteAlpha.100"} width={isMobile ? "28rem" : "75rem"} className='main' h={isMobile ? " 60rem" : "55rem"} ml={isMobile ? "" : "20rem"} mt={isMobile ? "10rem" : ""}>
+      <CardBody>
+        <VStack>
+          <HStack gap={isMobile ? "5rem" : "15rem"} mr={isMobile ? "10rem" : " "}>
+            <Avatar src={img2} size={isMobile ? "lg" : "2xl"} ml={isMobile ? "20rem" : " "} mb={isMobile ? "10rem" : " "}></Avatar>
+            <VStack mr={"14rem"}>
+              <Heading size={isMobile ? "lg" : "lg"} mr={isMobile ? "3rem" : " "} textAlign={"center"}>
+                Hackathon Name
+              </Heading>
+              <Button
+                  color='white'
+                  padding={"5"}
+                  borderRadius={"25"}
+                  fontSize={isMobile ? "md" : "lg"}
+                  fontWeight={"bold"}
+                  width={isMobile ? "10rem" : "25rem"}
+                  h={"3rem"}
+                  bgColor={joined ? "#6a0572" : "#6617cb"} // Change background color if joined
+                  mt={isMobile ? "2rem" : "1rem"}
+                  mr={isMobile ? "3rem" : ""}
+                  bgImage={
+                    joined
+                      ? "linear-gradient(315deg, #6a0572 0%, #cb218e 74%)"
+                      : "linear-gradient(315deg, #6617cb 0%, #cb218e 74%)"
+                  }
+                  _hover={{
+                    bg: joined ? "#824bb6" : "#c961de",
+                  }}
+                  sx={{
+                    "&:hover > *": {
+                      color: "white",
+                    },
+                  }}
+                  onClick={handleJoin}
+                >
+                  {joined ? "Joined" : "Apply Now"}
+                </Button>
+            </VStack>
+          </HStack>
+
                         <HStack  mr={isMobile? "6rem" :"2rem"} >
                             {
                                 isMobile && (
@@ -93,7 +120,7 @@ const HackathonDetailPage = () => {
                                  color: "white",
                                },
                              }}> 
-                         Project Gallery
+                        <Link to={"/projectgallery"}>Project Gallery</Link>
                          </Button>
                          <Button color='white' padding={ "5"} borderRadius={"20"} width={ "200px"}  h={"1rem"} bgColor="#6617cb" mt={"1rem"} 
                              bgImage="linear-gradient(315deg, #6617cb 0%, #cb218e 74%)"  _hover={{ bg: "#c961de" }}
@@ -143,7 +170,7 @@ const HackathonDetailPage = () => {
                                  color: "white",
                                },
                              }}> 
-                          Project
+                         <Link to={"/submission"}> Project</Link>
                          </Button>
                          <Button color='white' padding={ "5"} borderRadius={"20"} width={ "200px"}  h={"1rem"} bgColor="#6617cb" mt={"1rem"} 
                              bgImage="linear-gradient(315deg, #6617cb 0%, #cb218e 74%)"  _hover={{ bg: "#c961de" }}
@@ -152,7 +179,7 @@ const HackathonDetailPage = () => {
                                  color: "white",
                                },
                              }}> 
-                         Project Gallery
+                        <Link to={"/projectgallery"}>Project Gallery</Link>
                          </Button>
                          <Button color='white' padding={ "5"} borderRadius={"20"} width={ "200px"}  h={"1rem"} bgColor="#6617cb" mt={"1rem"} 
                              bgImage="linear-gradient(315deg, #6617cb 0%, #cb218e 74%)"  _hover={{ bg: "#c961de" }}
@@ -191,7 +218,7 @@ const HackathonDetailPage = () => {
                     </VStack>
                 </CardBody>
             </Card>
-        </Container>
+       
     </Box>
   )
 }

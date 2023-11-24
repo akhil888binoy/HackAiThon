@@ -5,51 +5,51 @@ const UserSchema = new mongoose.Schema(
     userName: {
       type: String,
       required: true,
-      min: 2,
-      max: 10,
+      minlength: 2,
+      maxlength: 10,
     },
     firstName: {
       type: String,
       required: true,
-      min: 2,
-      max: 50,
+      minlength: 2,
+      maxlength: 50,
     },
     lastName: {
       type: String,
       required: true,
-      min: 2,
-      max: 50,
+      minlength: 2,
+      maxlength: 50,
     },
     email: {
       type: String,
       required: true,
-      max: 50,
+      maxlength: 50,
       unique: true,
     },
     password: {
       type: String,
       required: true,
-      min: 5,
+      minlength: 5,
     },
     picturePath: {
       type: String,
       default: '',
     },
     bio: {
-      type: Text,
+      type: String,
       default: ' ',
     },
     socialmedia: {
-      type: Array,
-      default: '',
+      type: [String], // Define it as an array of strings
+      default: [],
     },
     createdhackathons: {
-      type: Array,
-      default: ' ',
+      type: [String], // Define it as an array of strings
+      default: [],
     },
     participatedhackathons: {
-      type: Array,
-      default: ' ',
+      type: [String], // Define it as an array of strings
+      default: [],
     },
   },
   { timestamps: true }

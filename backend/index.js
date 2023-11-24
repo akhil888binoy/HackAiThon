@@ -7,9 +7,11 @@ import multer from 'multer';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import authRoutes from './routes/auth.js';
 import userRoutes from './routes/users.js';
 import { verifyToken } from './middleware/auth.js';
+import { register } from './controllers/auth.js';
 
 /* CONFIGURATIONS */
 const __filename = fileURLToPath(import.meta.url);

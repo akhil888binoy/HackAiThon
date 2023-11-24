@@ -99,24 +99,24 @@ const Form = () => {
   };
 
   const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await fetch("http://localhost:3000/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(values),
-    });
-    const loggedIn = await loggedInResponse.json();
-    onSubmitProps.resetForm();
-    if (loggedIn) {
+    const { username, password } = values;
+  
+    if (username === "admin" && password === "admin123") {
+      // Proceed with the login
       dispatch(
         setLogin({
-          user: loggedIn.user,
-          token: loggedIn.token,
+          user: { username }, // You can modify this to include more user details
+          token: "dummyToken", // You might receive a token from the server in a real scenario
         })
       );
       navigate("/home");
+    } else {
+      // Display an error message or take appropriate action
+      console.error("Invalid username or password");
     }
-  };
   
+    onSubmitProps.resetForm();
+  };
   const handleFormSubmit = async (values, onSubmitProps) => {
     if (isLogin) await login(values, onSubmitProps);
     if (isRegister) await register(values, onSubmitProps);

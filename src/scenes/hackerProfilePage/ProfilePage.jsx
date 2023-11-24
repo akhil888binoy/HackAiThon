@@ -102,7 +102,7 @@ const ProfilePage = () => {
                 </CardBody>
             </Card>
             <Stack direction={isMobile? "column": "row"}>
-                    <Card className='Project' bgColor={"blueviolet"} width={ isMobile? "":"40rem"} mt={"2rem"}>
+                    <Card className='Project' bgColor={"whiteAlpha.200"} width={ isMobile? "":"40rem"} mt={"2rem"}>
                         <CardBody>
                             <VStack>
                                 <Heading size={"lg"}>Project Submitted</Heading>
@@ -156,7 +156,7 @@ const ProfilePage = () => {
                             </VStack>
                         </CardBody>
                     </Card>
-                    <Card className='Achievements' bgColor={"blueviolet"} width={"400px"} mt={"2rem"} ml={isMobile? "3rem":" "}>
+                    <Card className='Achievements' bgColor={"purple.700"} width={"400px"} mt={"2rem"} ml={isMobile? "3rem":" "}>
                         <CardBody>
                             <VStack>
                                 <Heading size={"lg"}>Achievements</Heading>

@@ -1,29 +1,146 @@
- [
-      {  
-        "NameOfHackathon": "Hack AI Thon",
-        "date":"21 June 2023-22 June 2023",
-        "location":"Online",
-        "ConductedBy": "IIT Kanpur",
-        "prize": "$1000",
-        "NoOfHackers":"700"
-      },
-      {
-        "NameOfHackathon": "Hack AI thon 2",
-        "date":"24 June 2023-25 June 2023",
-        "location":"Offline",
-        "ConductedBy": "NIT Kanpur",
-        "prize": "$1000",
-        "NoOfHackers":"700"
-
-      },
-      {
-        "NameOfHackathon": "Hack AI thon 3",
-        "date":"30 June 2023-31 June 2023",
-        "location":"Online",
-        "ConductedBy": "IIIT Kanpur",
-        "prize": "$1000",
-        "NoOfHackers":"700"
-      }
-      
-    ]
-  
+[
+  {
+    "NameOfHackathon": " Coding Challenge",
+    "date": "21 May 2024-22 May 2024",
+    "location": "Online",
+    "ConductedBy": "Quantum Computing Society",
+    "prize": "$2500",
+    "NoOfHackers": "600"
+  },
+  {
+    "NameOfHackathon": "Smart City Hack",
+    "date": "5 June 2024-6 June 2024",
+    "location": "Offline",
+    "ConductedBy": "Urban Innovation Council",
+    "prize": "$1800",
+    "NoOfHackers": "700"
+  },
+  {
+    "NameOfHackathon": "Blockchain Challenge",
+    "date": "18 July 2024-19 July 2024",
+    "location": "Online",
+    "ConductedBy": "Blockchain Enthusiasts Club",
+    "prize": "$2000",
+    "NoOfHackers": "550"
+  },
+  {
+    "NameOfHackathon": "HealthTech Hack",
+    "date": "8 May 2024-9 May 2024",
+    "location": "Offline",
+    "ConductedBy": "Health Innovation Institute",
+    "prize": "$2200",
+    "NoOfHackers": "800"
+  },
+  {
+    "NameOfHackathon": "Robotics Rumble",
+    "date": "22 June 2024-23 June 2024",
+    "location": "Online",
+    "ConductedBy": "Robotics Research Society",
+    "prize": "$2300",
+    "NoOfHackers": "600"
+  },
+  {
+    "NameOfHackathon": "Future of Work Hack",
+    "date": "10 July 2024-11 July 2024",
+    "location": "Offline",
+    "ConductedBy": "Workplace Innovation Hub",
+    "prize": "$1900",
+    "NoOfHackers": "750"
+  },
+  {
+    "NameOfHackathon": "AR/VR Quest",
+    "date": "25 May 2024-26 May 2024",
+    "location": "Online",
+    "ConductedBy": "Augmented Reality Society",
+    "prize": "$2400",
+    "NoOfHackers": "500"
+  },
+  {
+    "NameOfHackathon": "SpaceTech Challenge",
+    "date": "12 July 2024-13 July 2024",
+    "location": "Offline",
+    "ConductedBy": "Space Exploration Club",
+    "prize": "$2600",
+    "NoOfHackers": "650"
+  },
+  {
+    "NameOfHackathon": "GreenTech Hackfest",
+    "date": "5 May 2024-6 May 2024",
+    "location": "Online",
+    "ConductedBy": "Innovation Institute",
+    "prize": "$2100",
+    "NoOfHackers": "700"
+  },
+  {
+    "NameOfHackathon": "Code for Social Impact",
+    "date": "20 June 2024-21 June 2024",
+    "location": "Offline",
+    "ConductedBy": "Tech for Good Foundation",
+    "prize": "$1800",
+    "NoOfHackers": "600"
+  },
+  {
+    "NameOfHackathon": "Fintech Fusion",
+    "date": "8 May 2024-9 May 2024",
+    "location": "Online",
+    "ConductedBy": "Finance Innovation Network",
+    "prize": "$2300",
+    "NoOfHackers": "550"
+  },
+  {
+    "NameOfHackathon": "Hack the Machine",
+    "date": "15 July 2024-16 July 2024",
+    "location": "Offline",
+    "ConductedBy": "Machine Learning Society",
+    "prize": "$2500",
+    "NoOfHackers": "700"
+  },
+  {
+    "NameOfHackathon": "GameDev Challenge",
+    "date": "5 May 2025-6 May 2025",
+    "location": "Online",
+    "ConductedBy": "Game Developers Guild",
+    "prize": "$2000",
+    "NoOfHackers": "600"
+  },
+  {
+    "NameOfHackathon": "IoT Innovators Hack",
+    "date": "20 June 2025-21 June 2025",
+    "location": "Offline",
+    "ConductedBy": "Internet of Things Club",
+    "prize": "$2200",
+    "NoOfHackers": "750"
+  },
+  {
+    "NameOfHackathon": "Ethical Hacking Challenge",
+    "date": "8 July 2025-9 July 2025",
+    "location": "Online",
+    "ConductedBy": "Ethical Hacking Society",
+    "prize": "$2400",
+    "NoOfHackers": "500"
+  },
+  {
+    "NameOfHackathon": "Mobile App Marathon",
+    "date": "15 June 2025-16 June 2025",
+    "location": "Offline",
+    "ConductedBy": "App Development Alliance",
+    "prize": "$1900",
+    "NoOfHackers": "650"
+  },
+  {
+    "NameOfHackathon": "AI in Education Challenge",
+    "date": "5 May 2025-6 May 2025",
+    "location": "Online",
+    "ConductedBy": "Education Technology Institute",
+    "prize": "$2100",
+    "NoOfHackers": "700"
+  },
+  {
+    "NameOfHackathon": "Quantified Self Quest",
+    "date": "21 July 2025-22 July 2025",
+    "location": "Offline",
+    "ConductedBy": "Health and Tech Collaborative",
+    "prize": "$2600",
+    "NoOfHackers": "600"
+  }
+]

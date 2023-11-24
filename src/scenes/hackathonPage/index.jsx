@@ -76,6 +76,24 @@ const HackathonPage = () => {
  
      const [isMobile] = useMediaQuery("(max-width: 768px)");
      const [showText, setShowText] = React.useState(true);
+
+     const itemsPerPage = 3;
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(hackthonItems.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  const visibleHackathonItems = hackthonItems.slice(startIndex, endIndex);
+
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
+  };
+
+  const handlePrevPage = () => {
+    setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
+  };
+
      
  
    
@@ -281,7 +299,7 @@ const HackathonPage = () => {
 <Heading size='lg'>Hackathons For You </Heading>
 </Center>
 <VStack mt='6' spacing='3'>
-{hackthonItems.map((hackathon, index) => (
+{visibleHackathonItems.map((hackathon, index) => (
 
 <Card
 direction={{ base: 'column', sm: 'row' }}
@@ -313,7 +331,7 @@ w={isMobile ? "" : "50rem"}
     {hackathon.location}
 </Text>
 
-<CardBody {...hackathonOptions}  ml={"7rem"} mt={isMobile  ? "" : "13%"} mb={isMobile? "10%" : ""}>
+<CardBody {...hackathonOptions}  ml={"10rem"} mt={isMobile  ? "" : "13%"} mb={isMobile? "10%" : ""}>
  
 <Heading size={isMobile ? "lg" : "lg"} mt={isMobile?"18rem" : " "} > {hackathon.NameOfHackathon}</Heading>
     
@@ -353,6 +371,15 @@ w={isMobile ? "" : "50rem"}
 
 
 </VStack>
+<HStack gap={"35rem"} mt={"1rem"}>
+<Button onClick={handlePrevPage} disabled={currentPage === 1} bgColor={"violet"}>
+            Prev
+          </Button>
+          <Button onClick={handleNextPage} disabled={currentPage === totalPages} bgColor={"violet"}>
+            Next
+          </Button>
+         
+        </HStack>
 </CardBody>
 </Card>
 
@@ -427,8 +454,7 @@ w={isMobile ? "" : "50rem"}
 
   
         </Stack>
-        <Button borderRadius={"20px"} color={"purple"}> 
-=        </Button>
+        
       </Container>
     </Box>
           

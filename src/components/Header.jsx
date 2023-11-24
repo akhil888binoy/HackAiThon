@@ -7,10 +7,31 @@ import {  HStack } from '@chakra-ui/react';
 import img2 from "../assets/2.png";
 import {  Box } from '@chakra-ui/react';
 import { useMediaQuery } from '@chakra-ui/react';
+import { useDispatch, useSelector } from "react-redux";
+import { setMode, setLogout } from "../state";
+import { useNavigate } from "react-router-dom";
+import { Select } from '@chakra-ui/react';
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+} from '@chakra-ui/react'
 
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [isMobile] = useMediaQuery("(max-width: 768px)");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const user = useSelector((state) => state.user);
+  const fullName = user
+  ? `${user.firstName} ${user.lastName}`
+  : "Dummy Name"; // Display "Dummy Name" if user is not available
+
 
   
   return (
@@ -75,6 +96,20 @@ function Header() {
         }}>
                         <Link to={'/contact'}> Contact </Link>
                     </Button>
+                    <Menu>
+  <MenuButton as={Button} >
+    {fullName}
+  </MenuButton>
+  <MenuList bgColor={"whiteAlpha.200"}>
+    <MenuItem> 
+    <Button bgColor={"purple.600"}>
+      <Link to={'/profile'}>Profile</Link>
+      </Button> </MenuItem>
+    <MenuItem><Button bgColor={"red.500"}>Log Out</Button></MenuItem>
+   
+  </MenuList>
+</Menu>
+
                 </HStack>
         </DrawerBody>
       </DrawerContent>
